@@ -122,15 +122,16 @@ let elapsedTime = millis() - startTime; // Calculate elapsed time
   textSize(16);
   textAlign(RIGHT, RIGHT);
   text(`Time Left: ${(remainingTime / 1000).toFixed(1)}s`, width / 4, 30);
-  if (remainingTime === 0) {
-    message = "Game Over";
-  }
+ 
 
   // Display the message in the center
   text(message, width / 2, height / 2);
   let insideRectangle = false;
   // Display the count of red circles in the upper-left corner
    fill(255); // White color for the text
+  if (remainingTime === 0) {
+    message = "Game Over";
+  }
   textSize(32);
   textAlign(CENTER, CENTER);
   text(message, width / 2, height / 2); // Display the message
